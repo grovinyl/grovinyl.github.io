@@ -1,1 +1,55 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: Trebuchet MS, Tahoma, Geneva, sans-serif;
+}
 
+p {
+    font-family: Trebuchet MS, Tahoma, Geneva, sans-serif;
+    color:black;
+}
+
+p.dropcap:first-letter {
+    font: 200% times;
+    float: left;
+    margin-right: 5px;
+}
+body {
+    margin-top: 100px;
+    margin-left:100px;
+    margin-right:100px;
+    background-color:lightsteelblue
+}
+
+#myHeader {
+    border:5px solid black;
+}
+
+.image_border {
+    border: 5px solid rgba(83, 8, 154, 0.393);
+    border-radius: 5px;
+}
+
+.image_left {
+    float: left; margin-top: 5x
+}
+
+.image_right {
+    float: right;
+    margin-top: 5px; margin-left: 8px;
+}
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color:#6633ff;
+}
+
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #330099;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #9685ba;
+}
