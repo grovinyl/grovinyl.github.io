@@ -1,27 +1,14 @@
 /*---GENERAL---*/
 body {
-    margin: 0;
+    margin: 1;
     background-color: rgb(217, 217, 217);
     font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 img {
-    width: 100%;
+    width: auto;
     max-width: 300px;
     height: auto;  
-    float: center;
     border-radius: 50%;
-}
-
-/* ----HEADER---- */
-
-header {
-    
-    padding: 30px;
-    border: solid black 5px;
-    text-align: center;
-    font-size: 1em;
-    color: black;
-    font-family: Copperplate, Papyrus, fantasy;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -37,16 +24,35 @@ p {
     line-height: 1.5;
 }
 
+/* ----HEADER---- */
+
+header {
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+img.header-logo {
+    width: auto;
+    height: 100%;
+    float: right;
+    border-radius: 0%;
+}
+
+
+
+
 /* ----NAVBAR---- */
 
 ul.navbar {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border: 2px solid yellow;
+    border: 2px solid rgba(61, 105, 171, 0.119);
     display: flex;
     justify-content: center;
-    background-color: rgba(98, 161, 255, 0.386);
+    background-color: rgba(61, 105, 171, 0.386);
 }
 
 ul.navbar li {
@@ -82,20 +88,59 @@ ul.navbar li a:hover {
     flex-direction: row;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0);
-    border: 5px solid black;
     text-align: center;
 }
 
-.flex-container aside {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.263);
+.flex-container main {
+    display: flex;
+    flex: 5;
+    background-color: rgba(255, 255, 255, 0.277);
+    padding: 1rem;
+}
 
+main.main {
+    border-width: 0 0 3px 0;
+    border-style: none none solid none;
+    border-color: transparent transparent  rgba(20, 28, 121, 0.373) transparent;
+}
+
+.flex-container aside {
+    background-color: rgba(184, 184, 255, 0.174);
+    border-width: 0 0 0 3px;
+    border-style: none none solid solid;
+    border-color: transparent transparent rgba(20, 28, 121, 0.373) rgba(20, 28, 121, 0.373);
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.flex-container aside .socials {
+    align-self: flex-start;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.flex-container aside figure img {
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: 0.5rem;
 }
 
 .flex-container section {
     flex: 2;
-    background-color: white;
-    border: 5px solid green;
+    background-color: rgba(255, 255, 255, 0);
+    border: 5px solid rgba(78, 229, 78, 0);
+}
+
+.flex-container article {
+    flex: .5;
+    background-color: rgba(255, 97, 97, 0.86);
+
 }
 
 .menu-toggle {
@@ -106,6 +151,52 @@ ul.navbar li a:hover {
     display: none;
     color: black;
 }
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.socials .social-icon {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.socials .social-icon:hover {
+    transform: scale(1.5);
+    transition-duration: .5s;
+}
+
+.socials .caption {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.spacer {
+    flex: 2;
+}
+
+/* ----RESUME STYLINGS---- */
+
+section.resume {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(20, 28, 121, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* smooth transition */
+}
+
+section.resume:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* stronger shadow on hover */
+    transform: translateY(-3px); /* optional slight lift effect */
+}
+
+
 
 /* ----RESPONSIVE---- */
 
