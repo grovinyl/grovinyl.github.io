@@ -14,28 +14,28 @@
 </head>
 <body>
 
-<header>
-    <h1>Welcome to the Home Page</h1>
+<header class="flex-container">
+    <img class="header-logo" src="images/logo.png" alt="Logo">
 </header>
 
-<button class="menu-toggle">☰</button>
+<button class="menu-toggle">☰ Menu</button>
 
 <ul class="navbar">
     
     <li><a href="home.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
     <li><a href="resume.html">Resume</a></li>    
 </ul>
 
 
-<main class="flex-container">
+<main class="flex-container main">
 
     <section>
-        <h2>Hello! My name is Leo</h2>
+        <h2>Hello! My name is Leo!</h2>
          
         <p>I am an Information Technology B.S. senior at The University of Central Florida. 
 
-            <br><br>I currently work as a Student Assistant at the Technology Lending Desk at the 
+            <br><br>I currently work as a Student Assistant at the Technology Lending Desk of the 
             UCF John C. Hitt Library. I also serve as a Resident Assistant for 
             incoming freshmen at UCF through the Department of Housing and Residence Life.
 
@@ -49,17 +49,31 @@
     </section>
 
     <aside>
-        <img src="images/portrait.jpg" height="200" width="150" alt="A portrait of Leo">
-        <h2>Leo Zagkos</h2>
-        <p>This is the Side</p>
+        <figure>
+            <img src="images/portrait.jpg" height="200" width="150" alt="A portrait of Leo">
+            <figcaption><b>Let's Connect!</b></figcaption>
+        </figure>
+
+        <figure class="socials">
+            <a href="http://www.linkedin.com/in/leo-zagkos/"> 
+                <img class="social-icon" src="images/linkedin_logo.jpg" alt="LinkedIn Logo"> </a>
+            <a href="https://github.com/grovinyl"> 
+                <img class="social-icon" src="images/github_logo.png" alt="GitHub Logo"> </a>
+            <img class="social-icon" src="images/mail_icon.png" alt="Email Logo">
+                <p>Email: leon.zagkos@ucf.edu</p>
+        </figure>
+
+        <div class="spacer"></div>
        
     </aside>
 </main>
 
-<article class="flex-container">
-    <h2>Work Experience</h2>
-    
-</article>
+
+
+
+
+
+
 
 
 <!--FOOTER-->
