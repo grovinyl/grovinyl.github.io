@@ -181,19 +181,92 @@ main.main {
 
 /* ----RESUME STYLINGS---- */
 
+/* Timeline container */
+.resume-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+/* Central vertical line */
+.resume-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: rgba(20, 28, 121, 0.3);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* Each resume box */
 section.resume {
-    background-color: rgba(255, 255, 255, 0.9);
+    position: relative; /* so we can layer over line */
+    width: 45%;
+    background-color: rgba(184, 184, 255, 0.174);
     border: 2px solid rgba(20, 28, 121, 0.3);
     border-radius: 10px;
     padding: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* smooth transition */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 1;
 }
 
+/* Hover effect */
 section.resume:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* stronger shadow on hover */
-    transform: translateY(-3px); /* optional slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Alternate left/right positions */
+section.resume:nth-child(odd) {
+    align-self: flex-start; 
+}
+
+section.resume:nth-child(even) {
+    align-self: flex-end; 
+}
+
+/* Optional connecting dot for each section */
+section.resume::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(20, 28, 121, 0.7);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+section.resume:nth-child(odd)::before {
+    right: -8px; /* dot on right for left-side boxes */
+}
+
+section.resume:nth-child(even)::before {
+    left: -8px; /* dot on left for right-side boxes */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    section.resume {
+        width: 90%;
+        align-self: center !important;
+    }
+    section.resume::before {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+    .resume-container::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -223,6 +296,20 @@ section.resume:hover {
 
     .navbar.show {
         display: flex;
+    }
+
+    section.resume {
+        width: 90%;
+        align-self: center !important;
+    }
+    section.resume::before {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    .resume-container::before {
+        display: none;
     }
 }
 
