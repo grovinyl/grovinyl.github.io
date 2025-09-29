@@ -4,12 +4,18 @@ body {
     background-color: rgb(217, 217, 217);
     font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
+img.normal {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
 img {
     width: auto;
     max-width: 300px;
     height: auto;  
     border-radius: 50%;
 }
+
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
